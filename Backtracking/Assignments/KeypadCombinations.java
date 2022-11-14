@@ -16,14 +16,14 @@ public class KeypadCombinations {
         
         for(int i=0; i<digits.length(); i++){
             String num = digits.substring(i, i+1);
-            String charFromMap = map.get(num);
+            String fromMap = map.get(num);
             int n = deque.size();
             
             for(int j=0; j<n; j++){
                 String pull = deque.pollFirst();
                 
-                for(int k=0; k<charFromMap.length(); k++){
-                    String temp = pull.concat(charFromMap.charAt(k)+"");
+                for(int k=0; k<fromMap.length(); k++){
+                    String temp = pull.concat(fromMap.charAt(k)+"");
                     deque.add(temp);
                 }
             }
