@@ -1,8 +1,8 @@
 import java.util.*;
 public class Sum_3 {
     
-    List<List<Integer>> res = new ArrayList<>();
-    public List<List<Integer>> threeSum(int nums[]){
+    static List<List<Integer>> res = new ArrayList<>();
+    public static List<List<Integer>> threeSum(int nums[]){
         Arrays.sort(nums);
         for(int i=0;i<nums.length;i++){
             //handle the duplicates of a 
@@ -15,7 +15,7 @@ public class Sum_3 {
         return res;
     }
 
-    void twoSumSorted(int i, int j, int nums[], int target){
+    public static void twoSumSorted(int i, int j, int nums[], int target){
         int a = nums[i-1];
         while(i<j){ //Search space 
             if(nums[i]+nums[j] > target){
@@ -39,6 +39,6 @@ public class Sum_3 {
     }
     public static void main(String args[]){
         int nums[] = {-1, 0,  1, 2, -1, -4};
-        threeSum(nums);
+        System.out.print("The result are:"+threeSum(nums));
     }
 }
